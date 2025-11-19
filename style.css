@@ -1,0 +1,287 @@
+/* ===== RESET DAN DASAR ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1b1d26, #2d2a35);
+  color: #eee;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(66, 66, 151, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.logo {
+  color: #f8c146;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #eee;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  color: #f8c146;
+  transform: scale(1.05);
+}
+
+.menu li a.active {
+  color: #f8c146;
+  border-bottom: 2px solid #f8c146;
+  padding-bottom: 3px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8em;
+  color: #f8c146;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(25, 25, 35, 0.95);
+    padding: 20px 0;
+  }
+  .menu.show {
+    display: flex;
+  }
+  .menu li {
+    margin: 10px 0;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* ===== HERO (HALAMAN UTAMA) ===== */
+.hero {
+  padding-top: 120px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f8c146;
+}
+
+.hero h1 {
+  font-size: 2.3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #ccc;
+  font-size: 1.1em;
+}
+
+/* ===== CONTACT SECTION (UNTUK INDEX) ===== */
+.contact-section-final {
+  background: #0d0d12;
+  padding: 60px 20px;
+  border-top: 3px solid #f8c146;
+  margin-top: 50px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.contact-box {
+  background: #131722;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.contact-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(248, 193, 70, 0.3);
+}
+
+.contact-box h2 {
+  color: #f8c146;
+  margin-bottom: 5px;
+}
+
+.contact-box p {
+  color: #bbb;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.contact-box input,
+.contact-box textarea,
+.contact-box button,
+.contact-box input[type="file"] {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
+  background: #1b1f2a;
+  color: #eee;
+}
+
+::placeholder {
+  color: #bbb;
+}
+
+.contact-box button {
+  background: #f8c146;
+  color: #1f1f1f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-box button:hover {
+  background: #ffdc6e;
+}
+
+/* ===== CONTACT PAGE (HALAMAN BARU) ===== */
+.contact-page {
+  padding-top: 120px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1b1d26, #2d2a35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eee;
+}
+
+.contact-page-container {
+  background: #131722;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.contact-page-container h1 {
+  color: #f8c146;
+  margin-bottom: 10px;
+}
+
+.contact-page-container p {
+  color: #bbb;
+  margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #1b1f2a;
+  color: #eee;
+  font-size: 1em;
+}
+
+.contact-form button {
+  width: 100%;
+  background: #f8c146;
+  color: #1f1f1f;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ffdc6e;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: rgba(66, 66, 151, 0.7);
+  color: #aaa;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-social {
+  margin-bottom: 12px;
+}
+
+.footer-social a {
+  margin: 0 8px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  filter: brightness(0.95);
+  transition: 0.3s;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+/* ===== RESPONSIVE HERO TEXT ===== */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8em;
+  }
+  .hero p {
+    font-size: 0.9em;
+  }
+}
